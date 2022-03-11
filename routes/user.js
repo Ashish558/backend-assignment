@@ -44,7 +44,7 @@ router.post('/user/payment', async function (req, res) {
                 User.findById(user.referredUser)
                     .exec((err, refUser) => {
                         if (err) return res.status(400).json(err)
-                        refUser.totalEarnings = + 10
+                        refUser.totalEarnings += 10
                         return res.status(200).send('Payment done! referred user rewarded with rs 10')
                     })
             })
