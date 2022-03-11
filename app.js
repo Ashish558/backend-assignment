@@ -22,8 +22,8 @@ mongoose.connection.on("error", () => {
 })
 
 //user api
-const routes = require('./routes/user')
-app.use(routes)
+const userRoute = require('./routes/user')
+app.use(userRoute)
 
 
 const PORT = process.env.PORT || 4000
